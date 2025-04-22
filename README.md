@@ -1,82 +1,86 @@
 # TTS Azure Web
 
-English / [简体中文](./README_CN.md)
 
-TTS Azure Web is an Azure Text-to-Speech (TTS) web application. Fine-tune the output speech results using Speech Synthesis Markup Language (SSML). It allows you to run it locally or deploy it with a single click using your Azure Key.
+TTS Azure Web 是一个 Azure 文本转语音（TTS）网页应用。通过语音合成标记语言 (SSML) 对输出语音结果微调，可以在本地运行或使用你的 Azure Key 一键部署。
 
-Key Features:
+主要特性：
 
-- Supports selection of voice, language, style, and character.
-- Supports adjustments of speech speed, intonation, and volume.
-- Supports audio output download.
-- One-click deployment for both local and cloud environments.
-- Supports SSML config import and export.
+- 支持选择语音、语言、风格和角色
+- 支持语速、语调、音量的调节
+- 支持输出音频下载
+- 本地和云端一键部署。
+- 支持导入/导出 SSML 配置
 
-This application is ideal for those looking to minimize setup while experiencing the full capabilities of Azure TTS.
+该项目适合那些希望在体验 Azure TTS 全功能的同时最小化设置工作的用户。
 
-Live demo: https://tts.femoon.top
+在线演示： [https://tts.femoon.top/cn](https://tts.femoon.top/cn)
 
-## Getting Started
+## 入门指南
 
-Get your API Key
+获取你的 API 密钥
 
-- Go to [Microsoft Azure Text to Speech](https://azure.microsoft.com/en-us/products/ai-services/text-to-speech/) and click "Try Text to Speech Free"
-- Go to [Azure AI services](https://portal.azure.com/#view/Microsoft_Azure_ProjectOxford/CognitiveServicesHub/~/SpeechServices)
-- In the "Speech services" block, click "Add"
-- A region and two subscription keys will be listed beside Speech Services. You only need one key and its corresponding region.
+- 需要一张 VISA 卡
+- 访问 [Microsoft Azure 文本转语音](https://azure.microsoft.com/zh-cn/products/ai-services/text-to-speech) 并点击“免费试用文本转语音”
+- 访问 [Azure AI services](https://portal.azure.com/#view/Microsoft_Azure_ProjectOxford/CognitiveServicesHub/~/SpeechServices)
+- 在“语音服务”块中，点击“创建”
+- 创建成功后，在语音服务旁边将列出一个区域和两个订阅 Key 。你只需一个 Key 及其对应的区域
 
-## Deploy on Vercel
+具体可以参考 [Bob](https://github.com/ripperhe/Bob) 官方申请 Azure TTS 的[图文教程](https://bobtranslate.com/service/tts/microsoft.html)，流程只需要到**获取完密钥**就可以了。
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FFemoon%2Ftts-azure-web&env=SPEECH_KEY&env=SPEECH_REGION&project-name=tts-azure-web&repository-name=tts-azure-web)
+## 在 Vercel 上一键部署
 
-## Deploy locally
+[![使用 Vercel 部署](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FFemoon%2Ftts-azure-web&env=SPEECH_KEY&env=SPEECH_REGION&project-name=tts-azure-web&repository-name=tts-azure-web)
+
+## 在本地一键部署
 
 ```bash
-# install yarn
+# 安装 yarn
 npm i -g yarn
-# install dependencies
+# 安装依赖
 yarn
-# building the production environment
+# 构建生产环境
 yarn build
-# run production environment serve
+# 运行生产环境服务
 yarn start
 ```
 
-## Development
+## 开发
 
-Before starting development, you must create a new `.env.local` file at project root, and place your azure key and region into it:
+在开始开发之前，必须在项目根目录创建一个新的 `.env.local` 文件，并输入你的 Azure Key 和对应的地区：
 
 ```bash
-# your azure key (required)
+# 你的 Azure Key (必填)
 SPEECH_KEY=your_azure_key
-# your azure region (required)
+# 你的 Azure 地区 (必填)
 SPEECH_REGION=your_azure_region
-# Maximum input length limit (optional)
+# 输入框最大长度限制 (可选)
 NEXT_PUBLIC_MAX_INPUT_LENGTH=4000
 ```
 
-Run the development server:
+本地运行开发服务器：
 
 ```bash
-# install yarn
+# 安装 yarn
 npm i -g yarn
-# install dependencies
+# 安装依赖
 yarn
-# run serve
+# 运行服务器
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000/) with your browser to see the result.
+使用浏览器打开 [http://localhost:3000](http://localhost:3000/) 查看结果。
 
-## Git commit specification reference
+## Git 提交规范参考
 
-- `feat` add new functions
-- `fix` Fix issues/bugs
-- `perf` Optimize performance
-- `style` Change the code style without affecting the running result
-- `refactor` Re-factor code
-- `revert` Undo changes
-- `test` Test related, does not involve changes to business code
-- `docs` Documentation and Annotation
-- `chore` Updating dependencies/modifying scaffolding configuration, etc.
-- `ci` CI/CD
+- `feat` 增加新的业务功能
+- `fix` 修复业务问题/BUG
+- `perf` 优化性能
+- `style` 更改代码风格, 不影响运行结果
+- `refactor` 重构代码
+- `revert` 撤销更改
+- `test` 测试相关, 不涉及业务代码的更改
+- `docs` 文档和注释相关
+- `chore` 更新依赖/修改脚手架配置等琐事
+- `ci` 持续集成相关
+## 特别鸣谢
+感谢 [Femoon/tts-azure-web]([http://localhost:3000/](https://github.com/Femoon/tts-azure-web)) 项目提供的技术支持和灵感参考。
