@@ -83,4 +83,4 @@ yarn dev
 - `chore` 更新依赖/修改脚手架配置等琐事
 - `ci` 持续集成相关
 ## 特别鸣谢
-感谢 [Femoon/tts-azure-web]([http://localhost:3000/](https://github.com/Femoon/tts-azure-web)) 项目提供的技术支持和灵感参考。
+感谢 [Femoon/tts-azure-web](https://github.com/Femoon/tts-azure-web) 项目提供的技术支持和灵感参考。
